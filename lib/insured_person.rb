@@ -1,8 +1,13 @@
+require 'pry'
 require_relative 'person'
+require_relative 'log'
 
 # Inheritence
 # InsuredPerson is a subclass of Person
 class InsuredPerson < Person
+
+  # Mixin the log behavior.
+  include Log
 
   attr_reader :years_to_live, :ins_id
   attr_accessor :married, :smokes
@@ -46,7 +51,11 @@ class InsuredPerson < Person
   end
 
   def give_insurance?
-    years_to_live > 20
+    #     binding.pry
+    insurable =  years_to_live > 20
+
+    log("#{self.full_name} is #{insurable ? 'Not Denied' : 'Denied'} life insurance")
+    insurable
   end
 
   private

@@ -1,6 +1,10 @@
 require_relative './insured_person'
+require_relative 'log'
 
 class InsuranceCompany
+
+  include Log
+
   def initialize(company_name)
     @name = company_name
     @clients  = []
@@ -11,6 +15,7 @@ class InsuranceCompany
   end
 
   def add_client(person)
+    log("Adding the client #{person.full_name}")
     @clients << person
   end
 

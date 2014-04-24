@@ -379,6 +379,11 @@ puts "Jack has #{jack.years_to_live} years to live"
 
 # Create a method to generate ids for InsuredPersons
 
+
+# Module as a Mixin
+# Add lib/log.rb
+# define a log method that will call the say method.
+
 # Lab:
 # Create a method to find all the People that can be insured. Use InsuredPerson.give_insurance?
 
