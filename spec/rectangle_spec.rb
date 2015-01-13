@@ -32,14 +32,24 @@ RSpec.describe Rectangle do
     end
   end
 
+
+  # Testing the instance method of perimeter
+  describe '#perimeter?' do
+    it 'returns perimeter of rectangle' do
+      expect(rectangle.perimeter).to be 60
+    end
+  end
+
   # Testing the instance method of square?
-  describe '#square' do
+  describe '#square?' do
     subject(:square) { Rectangle.new(20, 20) }
     it 'returns if a rectangle is a square' do
       expect(rectangle.square?).to be false
       expect(square.square?).to be true
     end
   end
+
+
 
   # Testing the instance method of area
   describe '#area' do

@@ -19,4 +19,8 @@ class Rectangle
   def square?
     @length == @width
   end
+
+  def perimeter
+    @length + @length + @width + @width
+  end
 end
