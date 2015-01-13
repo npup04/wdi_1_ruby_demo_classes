@@ -49,8 +49,6 @@ RSpec.describe Rectangle do
     end
   end
 
-
-
   # Testing the instance method of area
   describe '#area' do
     it 'returns the value of @width' do
