@@ -18,8 +18,8 @@ RSpec.describe Circle do
   end
 
   # Testing the instance method of length
-  describe '#length' do
-    it 'returns the value of @length' do
+  describe '#radius' do
+    it 'returns the value of @radius' do
       expect(circle.radius).to be radius
     end
   end
@@ -36,7 +36,7 @@ RSpec.describe Circle do
   # pi is accessed with Math::PI
   describe '#area' do
     it 'returns area of the circle' do
-      expect(circle.area).to be_within(0.1).of(98.69604)
+      expect(circle.area).to be_within(0.1).of(314.15)
     end
   end
 
